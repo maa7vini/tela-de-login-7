@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+@keyframes fundoAnimado {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.left-body {
+    height: 100vh;
+    width: 40%;
+    background-image: linear-gradient(45deg, #20002c, #1D2671, #C33764);
+    background-size: 300%;
+    animation: fundoAnimado 8s linear infinite;
+}
+
+.right-body {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: rgb(206, 205, 205);
+}
+
+.right-body-login {
+    height: 350px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.178);
+}
+
+.right-body-login input {
+    padding: 5px 0px;
+    width: 90%;
+    margin: 5px 0px;
+    outline: none;
+}
+
+.right-body-login button {
+    margin-top: 10px;
+    padding: 7px 20px;
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    background-color: #20002c;
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.right-body-login button:hover {
+    background-color: #2f033f;
+}
+
+@media (max-width:750px) {
+    .left-body {
+        z-index: -1;
+        position: relative;
+    }
+
+    .right-body {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(45deg, #20002c, #1D2671, #C33764);
+        background-size: 300%;
+        animation: fundoAnimadao 8s linear infinite;
+    }
+
+    @keyframes fundoAnimadao {
+        0% {
+            background-position: 0;
+        }
+    
+        100% {
+            background-position: 100%;
+        }
+    }
+}
